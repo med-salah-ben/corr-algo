@@ -1,0 +1,22 @@
+ALGORITHM solution1
+VAR
+    tab1 , tab2 :ARRAY_OF INTEGER;
+    sum , i , j :INTEGER ;
+BEGIN
+    sum = 0;
+    FOR i FROM 0 TO tab1.length - 1 STEP 1  DO
+        FOR j FROM 0 TO tab2.length - 1 STEP 1  DO
+            IF (tab1[i] <> tab2[j]) THEN
+                sum += tab1[i];
+            END_IF
+        END_FOR
+    END_FOR
+    FOR j FROM 0 TO tab2.length -1 STEP 1  DO
+        FOR i FROM 0 TO tab1.length -1 STEP 1  DO
+            IF (tab2[j] <> tab1[i]) THEN
+                sum += tab2[j]
+            END_IF
+        END_FOR
+    END_FOR
+
+END

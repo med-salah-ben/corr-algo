@@ -1,0 +1,19 @@
+ALGORITHM solution2
+VAR
+    tab1 : HASH_TABLE<INTEGER,INTEGER>;
+    tab2 : HASH_TABLE<INTEGER,INTEGER>;
+    sum , i :INTEGER;
+
+BEGIN
+    sum = 0;
+    FOR i FROM 0 TO tab1.length -1 STEP 1  DO
+        IF (tab2.lookup(tab1[i]) = true) THEN
+            sum +=tab1[i];
+        END_IF
+    END_FOR
+    FOR i FROM 0 TO tab2.length -1 STEP 1  DO
+        IF (tab1.lookup(tab2[i]) = true) THEN
+            sum +=tab2[i];
+        END_IF
+    END_FOR
+END

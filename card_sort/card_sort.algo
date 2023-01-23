@@ -1,0 +1,15 @@
+PROCEDURE card_sort(VAR tab :  ARRAY_OF INTEGER)
+VAR
+    i, key , j = INTEGER;
+BEGIN
+    FOR i FROM 1 TO tab.length -1 STEP 1  DO
+        key := tab[i];
+        j = i-1;
+        //move eles of tab that are grater than key to the right position
+        WHILE (j >= 0 && tab[j]>key) DO
+            tab[j+1] = tab[j]
+            j--
+        END_WHILE
+        tab[j+1] = key
+    END_FOR
+END
